@@ -1,7 +1,7 @@
 {
-  "name": "cargo-chumdev-com",
-  "version": "1.0.0",
-  "description": "A blank template to get started with Payload 3.0",
+  "name": "cargo.chumdev.com",
+  "version": "0.0.1",
+  "description": "Demo running on PayloadCMS",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -39,7 +39,7 @@
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0",
-    "pnpm": "^9"
+    "pnpm": "^10"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
