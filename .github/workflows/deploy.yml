@@ -24,3 +24,5 @@ jobs:
             # Try to restart if exists, otherwise start new PM2 process
             pm2 restart cargo || pm2 start npm --name "cargo" -- start
             pm2 save
+        env:
+          ACTIONS_STEP_DEBUG: true
