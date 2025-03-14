@@ -16,13 +16,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/html/cargo
-            git pull
-            pnpm install
-            pnpm build
-
-            # Try to restart if exists, otherwise start new PM2 process
-            pm2 restart cargo || pm2 start npm --name "cargo" -- start
-            pm2 save
+            echo "connection successful with ip"
         env:
           ACTIONS_STEP_DEBUG: true
