@@ -1,0 +1,56 @@
+import { deepMerge, type Field } from 'payload';
+
+export const selectManufacturer = ({
+  name = 'manufacturer',
+  label = 'Manufacturer',
+  overrides = {},
+} = {}): Field => {
+  const baseField: Field = {
+    name,
+    label,
+    type: 'select',
+    hasMany: false,
+    options: [
+      { label: 'Default', value: 'default' },
+      { label: 'Acura', value: 'acura' },
+      { label: 'Alfa Romeo', value: 'alfa-romeo' },
+      { label: 'Aston Martin', value: 'aston-martin' },
+      { label: 'Audi', value: 'audi' },
+      { label: 'BMW', value: 'bmw' },
+      { label: 'Buick', value: 'buick' },
+      { label: 'Cadillac', value: 'cadillac' },
+      { label: 'Chevrolet', value: 'chevrolet' },
+      { label: 'Chrysler', value: 'chrysler' },
+      { label: 'Dodge', value: 'dodge' },
+      { label: 'Fiat', value: 'fiat' },
+      { label: 'Ford', value: 'ford' },
+      { label: 'Genesis', value: 'genesis' },
+      { label: 'GMC', value: 'gmc' },
+      { label: 'Honda', value: 'honda' },
+      { label: 'Hyundai', value: 'hyundai' },
+      { label: 'Infiniti', value: 'infiniti' },
+      { label: 'Jaguar', value: 'jaguar' },
+      { label: 'Jeep', value: 'jeep' },
+      { label: 'Kia', value: 'kia' },
+      { label: 'Land Rover', value: 'land-rover' },
+      { label: 'Lexus', value: 'lexus' },
+      { label: 'Lucid', value: 'lucid' },
+      { label: 'Maserati', value: 'maserati' },
+      { label: 'Mazda', value: 'mazda' },
+      { label: 'Mercedes-Benz', value: 'mercedes-benz' },
+      { label: 'MINI', value: 'mini' },
+      { label: 'Mitsubishi', value: 'mitsubishi' },
+      { label: 'Nissan', value: 'nissan' },
+      { label: 'Porsche', value: 'porsche' },
+      { label: 'Ram', value: 'ram' },
+      { label: 'Rivian', value: 'rivian' },
+      { label: 'Subaru', value: 'subaru' },
+      { label: 'Tesla', value: 'tesla' },
+      { label: 'Toyota', value: 'toyota' },
+      { label: 'Volkswagen', value: 'volkswagen' },
+      { label: 'Volvo', value: 'volvo' },
+    ],
+  };
+
+  return deepMerge(baseField, overrides);
+};
