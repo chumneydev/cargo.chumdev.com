@@ -1,6 +1,6 @@
-import { cantViewCollection, canViewCollection } from '@/access/canViewCollection'
+// import { cantViewCollection, canViewCollection } from '@/access/canViewCollection'
 import { hideCollectionForRoles } from '@/access/collectionAccess'
-import { isProhibitedFromViewing } from '@/access/isProhibitedFromViewing'
+// import { isProhibitedFromViewing } from '@/access/isProhibitedFromViewing'
 import type { CollectionConfig } from 'payload'
 
 export const Users: CollectionConfig = {

@@ -1,5 +1,5 @@
 import type { User } from '@/payload-types'
-import type { Access, AccessArgs, ClientUser } from 'payload'
+import type { AccessArgs } from 'payload'
 
 type AvailableRoles = User['roles'][number][]
 
@@ -23,8 +23,4 @@ export const hideFieldForRoles =
     if (hasPrivilegedRole) return true
 
     return !user.roles?.some((role: AvailableRoles[0]) => prohibitedRoles.includes(role))
-
-    return {
-      id: {},
-    }
   }

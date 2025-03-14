@@ -1,5 +1,5 @@
 import type { User } from '@/payload-types'
-import type { Access, AccessArgs, ClientUser } from 'payload'
+import type { ClientUser } from 'payload'
 
 type AvailableRoles = User['roles'][number][]
 

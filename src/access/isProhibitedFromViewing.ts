@@ -1,5 +1,5 @@
 import type { User } from '@/payload-types'
-import type { AccessArgs, ClientUser } from 'payload'
+import type { AccessArgs } from 'payload'
 
 export const isProhibitedFromViewing = (
   prohibitedRoles: User['roles'][number][],
