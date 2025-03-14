@@ -16,6 +16,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            echo "connection successful with ip"
+            echo "connection successful with ip2"
         env:
           ACTIONS_STEP_DEBUG: true
