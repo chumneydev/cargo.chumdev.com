@@ -5,8 +5,7 @@ import React from 'react'
 import { fileURLToPath } from 'url'
 
 import config from '@/payload.config'
-import './styles.css'
-
+//
 export default async function HomePage() {
   const headers = await getHeaders()
   const payloadConfig = await config
@@ -16,44 +15,22 @@ export default async function HomePage() {
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project !.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
+    <div className="mx-auto mt-12 max-w-7xl py-2">
+      {!user && (
+        <div className="border-b border-gray-950/5 pb-6">
+          <h2 className="text-4xl font-bold">Cargo is coming soon!</h2>
         </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
-      </div>
+      )}
+      {user && (
+        <div className="border-b border-gray-950/5">
+          <h1>Welcome {user.email}!</h1>
+          <p>Head over to the admin panel to get started. A wonderful new world awaits you!</p>
+        </div>
+      )}
+
+      <p className="mt-4">
+        This is probably broken, but our devs are working on it! In the meantime, go bother Ryan
+      </p>
     </div>
   )
 }
