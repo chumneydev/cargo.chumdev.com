@@ -58,8 +58,8 @@ export const VehicleResearch: CollectionConfig = {
         },
         {
           name: 'trims',
-          label: 'La',
-          description: 'Layout of the vehicle',
+          label: 'Trims',
+          description: 'Vehicle Trims',
           fields: [],
         },
         {
@@ -88,7 +88,7 @@ export const VehicleResearch: CollectionConfig = {
 
         return {
           roles: {
-            equals: 'specialist ',
+            equals: 'specialist',
           },
         }
       },
